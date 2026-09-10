@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QR Scanner</title>
+<script src="jsQR.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="device">
+  <div class="device-head">
+    <h1>QR SCANNER</h1>
+    <span class="status" id="status">idle</span>
+  </div>
+
+  <div class="viewfinder">
+    <video id="video" playsinline muted></video>
+    <div class="reticle" id="reticle">
+      <div class="corner tl"></div>
+      <div class="corner tr"></div>
+      <div class="corner bl"></div>
+      <div class="corner br"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="startBtn">Start camera</button>
+    <button id="stopBtn" disabled>Stop</button>
+  </div>
+
+  <div class="log">
+    <div class="log-title">DECODED</div>
+    <div id="results">
+      <div class="empty">Nothing scanned yet.</div>
+    </div>
+  </div>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
